@@ -999,16 +999,16 @@
                     "name": "Engine",
                     "type": "Value",
                     "id": "a4e09456-c32c-4069-89b3-36e44129a1b4",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "Integer",
                     "processors": "",
-                    "interactions": "Hold,Tap",
+                    "interactions": "",
                     "initialStateCheck": true
                 },
                 {
                     "name": "Rotation",
                     "type": "Value",
                     "id": "2182a304-f563-4c97-8914-253e211e9e3a",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "Integer",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -1060,7 +1060,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
+                    "name": "Positive",
                     "id": "487c9985-9e77-48be-9f72-27f728144d1b",
                     "path": "<Keyboard>/a",
                     "interactions": "",
@@ -1071,7 +1071,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
+                    "name": "Negative",
                     "id": "5f7f72e6-9ef1-4b94-b8d0-e42eb678ba76",
                     "path": "<Keyboard>/d",
                     "interactions": "",

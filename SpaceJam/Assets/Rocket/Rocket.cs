@@ -3,15 +3,23 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Rocket : MonoBehaviour
-
 {
 
-    public float force = 2f;
-    public Rigidbody2D myRigidbody;
-    public GameObject myBody;
-    public Vector2 newSize = new Vector2(2f, 2f); // Width and height in scale units
+    public float enginePower = 0;
+    public float engineDirection = 0; // Angle in degrees
+    public Rigidbody2D body;
+    public GameObject obj;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Vector2 newSize; // Width and height in scale units
+
+    public Vector2 DegreeToVector(float angle)
+    {
+        // Convert angle in degrees to radians
+        float radian = angle * Mathf.Deg2Rad;
+        // Calculate the x and y components
+        return new Vector2(Mathf.Cos(radian), Mathf.Sin(radian));
+    }
+    
     void Start()
     {
         // setting up the size
@@ -19,17 +27,9 @@ public class Rocket : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.wKey.isPressed)
-        {
-            force = force + 0.1f;
-        }
-        if (Keyboard.current.sKey.isPressed)
-        {
-            force = force - 0.1f;
-        }
-        myRigidbody.AddForce(Vector2.up * force * Time.deltaTime);
+        obj.transform.rotation = Quaternion.Euler(0, 0, engineDirection - 90);
+        body.AddForce(DegreeToVector(engineDirection) * enginePower * Time.deltaTime);
     }
 }

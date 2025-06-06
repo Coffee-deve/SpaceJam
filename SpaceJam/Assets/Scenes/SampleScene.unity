@@ -225,7 +225,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -351,9 +351,9 @@ GameObject:
   - component: {fileID: 721977382}
   - component: {fileID: 721977380}
   - component: {fileID: 721977379}
+  - component: {fileID: 721977386}
   - component: {fileID: 721977383}
   - component: {fileID: 721977384}
-  - component: {fileID: 721977386}
   - component: {fileID: 721977385}
   m_Layer: 0
   m_Name: Rocket
@@ -462,13 +462,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721977378}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0, y: 0, z: -90}
 --- !u!114 &721977383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,9 +481,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ce94f9821f99b4d803122c848c19cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 3
-  myRigidbody: {fileID: 721977384}
-  myBody: {fileID: 721977378}
+  enginePower: 0
+  engineDirection: 0
+  body: {fileID: 721977384}
+  obj: {fileID: 721977378}
   newSize: {x: 1, y: 1}
 --- !u!50 &721977384
 Rigidbody2D:
@@ -497,7 +498,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -662,6 +663,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31dd96a9c5131034ba45a0e3a2f9e708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rocket: {fileID: 721977383}
+  engineDelta: 10
+  rotationDelta: 90
 --- !u!1 &2114268875
 GameObject:
   m_ObjectHideFlags: 0
