@@ -380,7 +380,7 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -404,7 +404,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3872478775678268475, guid: 6f5125b2cd28ab64aa9a85f37a9dbf52, type: 3}
+  m_Sprite: {fileID: 6146747589886145472, guid: 6f5125b2cd28ab64aa9a85f37a9dbf52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -480,7 +480,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 3
-  acceleration_constant: 0
   myRigidbody: {fileID: 721977384}
   myBody: {fileID: 721977378}
   newSize: {x: 1, y: 1}
