@@ -6,7 +6,6 @@ public class Rocket : MonoBehaviour
 {
 
     public float enginePower = 0;
-    public float G = 9.81f;
     public float engineDirection = 0; // Angle in degrees
     public Rigidbody2D body;
     public GameObject obj;
