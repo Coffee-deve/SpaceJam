@@ -12,7 +12,7 @@ public class Rocket : MonoBehaviour
     public Rigidbody2D body;
     public GameObject obj;
     [SerializeField] private Animator animator;
-    public Vector2 newSize; // Width and height in scale units
+   public Vector2 newSize; // Width and height in scale units
 
     public Vector2 DegreeToVector(float angle)
     {
